@@ -1,5 +1,12 @@
+import styled from 'styled-components';
+
 function App() {
-  return <div>Home Page</div>;
+  return <Title>Home Page</Title>;
 }
 
 export default App;
+
+const Title = styled.h1`
+  font-size: 2rem;
+  color: #333;
+`;
