@@ -1,10 +1,12 @@
 import { HeaderNav, Logo } from '@/components';
 
+import * as S from './Header.styled';
+
 export const Header = () => {
   return (
-    <header>
+    <S.Header>
       <Logo />
       <HeaderNav />
-    </header>
+    </S.Header>
   );
 };

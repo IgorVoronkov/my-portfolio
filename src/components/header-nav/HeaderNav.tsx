@@ -1,6 +1,8 @@
+import * as S from './HeaderNav.styled';
+
 export const HeaderNav = () => {
   return (
-    <nav>
+    <S.Nav>
       <ul>
         <li>
           <a href="#projects">Проекты</a>
@@ -15,6 +17,6 @@ export const HeaderNav = () => {
           <a href="#contacts">Контакты</a>
         </li>
       </ul>
-    </nav>
+    </S.Nav>
   );
 };
