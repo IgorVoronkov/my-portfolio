@@ -1,12 +1,11 @@
-import styled from 'styled-components';
+import { Header } from './layout';
 
 function App() {
-  return <Title>Home Page</Title>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;
-
-const Title = styled.h1`
-  font-size: 2rem;
-  color: #333;
-`;
