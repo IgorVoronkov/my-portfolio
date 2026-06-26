@@ -1,9 +1,10 @@
-import { Header } from './layout';
+import { Header, HeroSection } from './layout';
 
 function App() {
   return (
     <>
       <Header />
+      <HeroSection />
     </>
   );
 }
