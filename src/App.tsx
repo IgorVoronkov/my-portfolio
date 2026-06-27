@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header, HeroSection, SkillsSection } from './layout';
+import { Header, HeroSection, ProjectsSection, SkillsSection } from './layout';
 
 const AppContainer = styled.div`
   & > * {
@@ -14,6 +14,7 @@ function App() {
       <Header />
       <HeroSection />
       <SkillsSection />
+      <ProjectsSection />
     </AppContainer>
   );
 }
