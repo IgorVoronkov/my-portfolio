@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 
-import { ContactSection, Header, HeroSection, ProjectsSection, SkillsSection } from './layout';
+import {
+  ContactSection,
+  Footer,
+  Header,
+  HeroSection,
+  ProjectsSection,
+  SkillsSection,
+} from './layout';
 
 const AppContainer = styled.div`
   & > * {
-    padding: 20px;
+    padding: 40px;
   }
 `;
 
@@ -16,6 +23,7 @@ function App() {
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
+      <Footer />
     </AppContainer>
   );
 }
