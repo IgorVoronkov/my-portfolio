@@ -7,13 +7,20 @@ const globalCss = css`
     box-sizing: border-box;
   }
 
-  * :not(dialog) {
+  *:not(dialog) {
     margin: 0;
   }
 
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
   }
 
   img,
