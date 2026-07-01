@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 
-const globalCss = css`
+const cssReset = css`
   *,
   *::before,
   *::after {
@@ -67,6 +67,6 @@ const globalCss = css`
   }
 `;
 
-export const GlobalStyles = createGlobalStyle`
-  ${globalCss}
+export const CssReset = createGlobalStyle`
+  ${cssReset}
 `;
