@@ -1,3 +1,6 @@
+export { Container } from './container/Container';
+export { ContentIllustrated } from './content-illustrated/ContentIllustrated';
+export { FlexWrapper } from './flex-wrapper/FlexWrapper';
 export { HeaderNav } from './header-nav/HeaderNav';
 export { Logo } from './logo/Logo';
 export { ProjectCard } from './project-card/ProjectCard';
