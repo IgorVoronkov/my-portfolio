@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-  display: flex;
-  justify-content: space-around;
   color: #fff;
   text-align: center;
   background-color: #2d1564;

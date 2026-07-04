@@ -1,23 +1,33 @@
-import { SkillCard } from '@/components';
+import { SkillsIllustrationUrl } from '@/assets/images';
+import { Container, ContentIllustrated, FlexWrapper, SkillCard } from '@/components';
 import { skills } from '@/shared/skills.data';
 
 import * as S from './SkillsSection.styled';
 
 export const SkillsSection = () => (
   <S.Section>
-    <S.Heading>Skills</S.Heading>
-    <S.Columns>
-      <S.LeftColumn>
-        <S.Description>I have a vast experience in the following web technologies:</S.Description>
-        <S.SkillsGrid>
-          {skills.map((skill) => (
-            <SkillCard key={skill.name} skill={skill} />
-          ))}
-        </S.SkillsGrid>
-      </S.LeftColumn>
-      <S.RightColumn>
-        <S.Illustration />
-      </S.RightColumn>
-    </S.Columns>
+    <Container>
+      <S.Heading>Skills</S.Heading>
+      <ContentIllustrated
+        $picture={{
+          src: SkillsIllustrationUrl,
+          where: 'right',
+          width: '400px',
+        }}
+      >
+        <FlexWrapper $alignItems="center">
+          <div>
+            <S.Description>
+              I have a vast experience in the following web technologies:
+            </S.Description>
+            <FlexWrapper $wrap="wrap" $justifyContent="space-around">
+              {skills.map((skill) => (
+                <SkillCard key={skill.name} skill={skill} />
+              ))}
+            </FlexWrapper>
+          </div>
+        </FlexWrapper>
+      </ContentIllustrated>
+    </Container>
   </S.Section>
 );

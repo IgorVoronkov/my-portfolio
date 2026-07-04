@@ -1,9 +1,9 @@
-import * as S from './HeaderNav.styled';
+import { FlexWrapper } from '../flex-wrapper/FlexWrapper';
 
 export const HeaderNav = () => {
   return (
-    <S.Nav>
-      <ul>
+    <nav>
+      <FlexWrapper as="ul" $gap="50px">
         <li>
           <a href="#projects">Проекты</a>
         </li>
@@ -16,7 +16,7 @@ export const HeaderNav = () => {
         <li>
           <a href="#contacts">Контакты</a>
         </li>
-      </ul>
-    </S.Nav>
+      </FlexWrapper>
+    </nav>
   );
 };
