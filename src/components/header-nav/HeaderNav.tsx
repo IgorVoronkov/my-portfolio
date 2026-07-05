@@ -1,21 +1,19 @@
-import { FlexWrapper } from '../flex-wrapper/FlexWrapper';
+import { FlexWrapper } from '@/components';
+import { SECTIONS } from '@/shared/constants';
+
+import { StyledNavLink } from './HeaderNav.styled';
 
 export const HeaderNav = () => {
+  const navLinks = Object.values(SECTIONS).filter((section) => section.id !== SECTIONS.hero.id);
+
   return (
     <nav>
       <FlexWrapper as="ul" $gap="50px">
-        <li>
-          <a href="#projects">Проекты</a>
-        </li>
-        <li>
-          <a href="#technologies">Технологии</a>
-        </li>
-        <li>
-          <a href="#about">Обо мне</a>
-        </li>
-        <li>
-          <a href="#contacts">Контакты</a>
-        </li>
+        {navLinks.map(({ id, title }) => (
+          <li key={id}>
+            <StyledNavLink href={`#${id}`}>{title}</StyledNavLink>
+          </li>
+        ))}
       </FlexWrapper>
     </nav>
   );

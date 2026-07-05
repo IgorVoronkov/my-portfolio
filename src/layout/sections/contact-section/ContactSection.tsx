@@ -1,11 +1,12 @@
 import { ContactIllustrationUrl } from '@/assets/images';
 import { Container, ContentIllustrated, FlexWrapper } from '@/components';
+import { SECTIONS } from '@/shared/constants';
 
 import * as S from './ContactSection.styled';
 
 export const ContactSection = () => {
   return (
-    <S.Section>
+    <S.Section id={SECTIONS['contact-me'].id}>
       <S.Title>Contact me</S.Title>
       <Container>
         <ContentIllustrated

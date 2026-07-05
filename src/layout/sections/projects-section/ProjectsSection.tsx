@@ -1,10 +1,11 @@
 import { Container, FlexWrapper, ProjectCard } from '@/components';
+import { SECTIONS } from '@/shared/constants';
 import { projects } from '@/shared/projects.data';
 
 import * as S from './ProjectsSection.styled';
 
 export const ProjectsSection = () => (
-  <S.Section>
+  <S.Section id={SECTIONS.projects.id}>
     <Container>
       <S.Heading>Projects</S.Heading>
       <ul>

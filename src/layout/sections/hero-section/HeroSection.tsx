@@ -1,11 +1,12 @@
 import { HeroPhotoUrl } from '@/assets/images';
 import { Container, FlexWrapper } from '@/components';
+import { SECTIONS } from '@/shared/constants';
 
 import * as S from './HeroSection.styled';
 
 export const HeroSection = () => {
   return (
-    <S.Section>
+    <S.Section id={SECTIONS.hero.id}>
       <Container>
         <FlexWrapper $gap="24px" $alignItems="center">
           <S.Content>

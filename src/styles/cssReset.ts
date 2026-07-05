@@ -17,6 +17,10 @@ const cssReset = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   ul,
   ol {
     padding: 0;

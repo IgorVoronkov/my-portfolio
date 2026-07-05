@@ -5,12 +5,14 @@ import * as S from './Header.styled';
 export const Header = () => {
   return (
     <S.Header>
-      <Container>
-        <FlexWrapper $alignItems="center">
-          <Logo />
-          <HeaderNav />
-        </FlexWrapper>
-      </Container>
+      <FlexWrapper>
+        <Container $paddingY="0px">
+          <FlexWrapper $alignItems="center">
+            <Logo />
+            <HeaderNav />
+          </FlexWrapper>
+        </Container>
+      </FlexWrapper>
     </S.Header>
   );
 };

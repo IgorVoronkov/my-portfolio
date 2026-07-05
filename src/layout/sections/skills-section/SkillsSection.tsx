@@ -1,11 +1,12 @@
 import { SkillsIllustrationUrl } from '@/assets/images';
 import { Container, ContentIllustrated, FlexWrapper, SkillCard } from '@/components';
+import { SECTIONS } from '@/shared/constants';
 import { skills } from '@/shared/skills.data';
 
 import * as S from './SkillsSection.styled';
 
 export const SkillsSection = () => (
-  <S.Section>
+  <S.Section id={SECTIONS.skills.id}>
     <Container>
       <S.Heading>Skills</S.Heading>
       <ContentIllustrated
