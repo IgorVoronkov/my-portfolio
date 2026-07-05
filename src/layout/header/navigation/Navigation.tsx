@@ -1,9 +1,9 @@
 import { FlexWrapper } from '@/components';
 import { SECTIONS } from '@/shared/constants';
 
-import { StyledNavLink } from './HeaderNav.styled';
+import { StyledNavLink } from './Navigation.styled';
 
-export const HeaderNav = () => {
+export const Navigation = () => {
   const navLinks = Object.values(SECTIONS).filter((section) => section.id !== SECTIONS.hero.id);
 
   return (

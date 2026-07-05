@@ -1,6 +1,7 @@
-import { Container, FlexWrapper, HeaderNav, Logo } from '@/components';
+import { Container, FlexWrapper, Logo } from '@/components';
 
 import * as S from './Header.styled';
+import { Navigation } from './navigation/Navigation';
 
 export const Header = () => {
   return (
@@ -9,7 +10,7 @@ export const Header = () => {
         <Container $paddingY="0px">
           <FlexWrapper $alignItems="center">
             <Logo />
-            <HeaderNav />
+            <Navigation />
           </FlexWrapper>
         </Container>
       </FlexWrapper>
