@@ -1,4 +1,4 @@
-import { HeroPhotoUrl } from '@/assets/images';
+import { HeroPhotoUrl } from '@/assets/images/hero-section';
 import { Container, FlexWrapper } from '@/components';
 import { SECTIONS } from '@/shared/constants';
 
@@ -18,7 +18,9 @@ export const HeroSection = () => {
             </p>
             <button>Hire me</button>
           </S.Content>
-          <S.Photo src={HeroPhotoUrl} alt="Igor Voronkov" />
+          <S.PortraitWrapper>
+            <S.PortraitImage src={HeroPhotoUrl} alt="Igor Voronkov" />
+          </S.PortraitWrapper>
         </FlexWrapper>
       </Container>
     </S.Section>
