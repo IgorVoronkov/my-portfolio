@@ -10,13 +10,13 @@ export const HeroSection = () => {
       <Container>
         <FlexWrapper $gap="24px" $alignItems="center">
           <S.Content>
-            <span>{"Hi👋, I'm a"}</span>
-            <h1>Software Developer</h1>
-            <p>
-              {"I'm"} <strong>Igor Voronkov</strong>, a developer dedicated to making the world a
-              better place one line of code at a time.
-            </p>
-            <button>Hire me</button>
+            <S.Greeting>{"Hi👋, I'm a"}</S.Greeting>
+            <S.Heading>Software Developer</S.Heading>
+            <S.Presentation>
+              {"I'm"} <b>Igor Voronkov</b>, a developer dedicated to making the world a better place
+              one line of code at a time.
+            </S.Presentation>
+            <S.Button>Hire me</S.Button>
           </S.Content>
           <S.PortraitWrapper>
             <S.PortraitImage src={HeroPhotoUrl} alt="Igor Voronkov" />

@@ -34,7 +34,7 @@ const fontSize = {
   '3xl': '2rem', // 32px
   '4xl': '2.5rem', // 40px
   '5xl': '3rem', // 48px
-};
+} as const;
 
 const spacing = {
   none: '0px',
