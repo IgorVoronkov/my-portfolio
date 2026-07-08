@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 const globalStyles = css`
-  html {
+  :root {
     scroll-behavior: smooth;
   }
 

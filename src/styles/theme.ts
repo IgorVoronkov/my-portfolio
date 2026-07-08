@@ -23,6 +23,7 @@ const colors = {
 const sizes = {
   headerHeight: '80px',
   skillIcon: '40px',
+  footerWaveHeight: 'calc(100vw * 70 / 1440)',
 } as const;
 
 const fontSize = {
