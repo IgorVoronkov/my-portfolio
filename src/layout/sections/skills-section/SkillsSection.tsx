@@ -1,8 +1,9 @@
 import { SkillsIllustrationUrl } from '@/assets/images';
-import { Container, ContentIllustrated, FlexWrapper, SkillCard } from '@/components';
+import { Container, ContentIllustrated, FlexWrapper } from '@/components';
 import { SECTIONS } from '@/shared/constants';
-import { skills } from '@/shared/skills.data';
 
+import { SKILLS } from './constants';
+import { SkillIcon } from './skill-icon/SkillIcon';
 import * as S from './SkillsSection.styled';
 
 export const SkillsSection = () => (
@@ -17,16 +18,19 @@ export const SkillsSection = () => (
         }}
       >
         <FlexWrapper $alignItems="center">
-          <div>
+          <S.Content>
             <S.Description>
               I have a vast experience in the following web technologies:
             </S.Description>
-            <FlexWrapper $wrap="wrap" $justifyContent="space-around">
-              {skills.map((skill) => (
-                <SkillCard key={skill.name} skill={skill} />
+
+            <FlexWrapper as="ul" $justifyContent="flex-start" $wrap="wrap" $gap="1em 0">
+              {SKILLS.map((skill) => (
+                <li key={skill.label}>
+                  <SkillIcon key={skill.label} skill={skill} />
+                </li>
               ))}
             </FlexWrapper>
-          </div>
+          </S.Content>
         </FlexWrapper>
       </ContentIllustrated>
     </Container>

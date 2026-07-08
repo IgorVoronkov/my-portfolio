@@ -22,6 +22,7 @@ const colors = {
 
 const sizes = {
   headerHeight: '80px',
+  skillIcon: '40px',
 } as const;
 
 const fontSize = {
@@ -38,6 +39,7 @@ const fontSize = {
 
 const spacing = {
   none: '0px',
+  xxs: '4px',
   xs: '8px',
   sm: '16px',
   md: '24px',
