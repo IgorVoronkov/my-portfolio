@@ -8,7 +8,7 @@ export const HeroSection = () => {
   return (
     <S.Section id={SECTIONS.hero.id}>
       <Container>
-        <FlexWrapper $gap="24px" $alignItems="center">
+        <FlexWrapper $justifyContent="space-between" $alignItems="center" $gap="24px">
           <S.Content>
             <S.Greeting>{"Hi👋, I'm a"}</S.Greeting>
             <S.Heading>Software Developer</S.Heading>

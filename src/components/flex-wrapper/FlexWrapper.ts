@@ -10,9 +10,9 @@ interface FlexWrapperProps {
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
   display: flex;
-  flex-flow: ${({ $direction }) => $direction ?? 'row'} ${({ $wrap }) => $wrap ?? 'nowrap'};
-  gap: ${({ $gap }) => $gap ?? '0'};
-  align-items: ${({ $alignItems }) => $alignItems ?? 'stretch'};
-  justify-content: ${({ $justifyContent }) => $justifyContent ?? 'space-between'};
+  flex-flow: ${({ $direction }) => $direction ?? null} ${({ $wrap }) => $wrap ?? null};
+  gap: ${({ $gap }) => $gap ?? null};
+  align-items: ${({ $alignItems }) => $alignItems ?? null};
+  justify-content: ${({ $justifyContent }) => $justifyContent ?? null};
   height: 100%;
 `;

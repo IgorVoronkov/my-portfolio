@@ -6,14 +6,12 @@ import { Navigation } from './navigation/Navigation';
 export const Header = () => {
   return (
     <S.Header>
-      <FlexWrapper>
-        <Container>
-          <FlexWrapper $alignItems="center">
-            <Logo />
-            <Navigation />
-          </FlexWrapper>
-        </Container>
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper $justifyContent="space-between" $alignItems="center">
+          <Logo />
+          <Navigation />
+        </FlexWrapper>
+      </Container>
     </S.Header>
   );
 };

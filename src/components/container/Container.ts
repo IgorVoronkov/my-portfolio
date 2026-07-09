@@ -5,6 +5,7 @@ export const Container = styled.div`
   max-width: calc(
     ${({ theme: { container } }) => container.maxWidth + ' + ' + container.paddingX + ' * 2'}
   );
+  height: 100%;
   padding: 0 ${({ theme }) => theme.container.paddingX};
   margin: 0 auto;
 `;

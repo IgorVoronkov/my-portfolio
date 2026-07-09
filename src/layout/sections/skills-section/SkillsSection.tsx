@@ -23,7 +23,7 @@ export const SkillsSection = () => (
               I have a vast experience in the following web technologies:
             </S.Description>
 
-            <FlexWrapper as="ul" $justifyContent="flex-start" $wrap="wrap" $gap="1em 0">
+            <FlexWrapper as="ul" $wrap="wrap" $gap="1em 0">
               {SKILLS.map((skill) => (
                 <li key={skill.label}>
                   <SkillIcon key={skill.label} skill={skill} />
