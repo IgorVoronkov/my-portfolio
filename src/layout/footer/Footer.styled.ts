@@ -6,6 +6,8 @@ const wave = `"${waveUrl}"`;
 
 export const Footer = styled.footer`
   position: relative;
+  height: ${({ theme }) => theme.sections.footer.height};
+  padding-top: ${({ theme }) => theme.sections.footer.paddings.top};
   color: ${({ theme }) => theme.colors.secondary[0]};
   text-align: center;
   background-color: ${({ theme }) => theme.colors.primary[500]};
@@ -15,7 +17,7 @@ export const Footer = styled.footer`
     top: 0;
     display: block;
     width: 100%;
-    height: calc(${({ theme }) => theme.sizes.footerWaveHeight} + 10px);
+    height: calc(${({ theme }) => theme.sections.footer.waveHeight} + 10px);
     content: '';
     background-color: inherit;
     mask-image: url(${wave});

@@ -8,7 +8,7 @@ export const Footer = () => {
 
   return (
     <S.Footer>
-      <Container $paddingY="60px">
+      <Container>
         <FlexWrapper $justifyContent="space-around">
           <div>
             <S.BlockLabel>My social media links:</S.BlockLabel>

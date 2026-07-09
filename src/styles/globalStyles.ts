@@ -10,9 +10,9 @@ const globalStyles = css`
     background-color: ${({ theme }) => theme.colors.secondary[50]};
   }
 
-  section {
+  #root > section {
     scroll-margin-top: calc(
-      ${({ theme }) => theme.sizes.headerHeight} + ${({ theme }) => theme.spacing.md}
+      ${({ theme }) => theme.sections.header.height + ' + ' + theme.spacing.md}
     );
   }
 `;

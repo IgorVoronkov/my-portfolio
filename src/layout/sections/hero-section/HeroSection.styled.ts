@@ -6,7 +6,8 @@ const bgUrl = `"${HeroPhotoBgUrl}"`;
 const circlesUrl = `"${CirclesUrl}"`;
 
 export const Section = styled.section`
-  padding-top: ${({ theme }) => theme.spacing.xxl};
+  padding-top: ${({ theme }) => theme.sections.hero.paddings.top};
+  padding-bottom: ${({ theme }) => theme.sections.hero.paddings.bottom};
   background-color: ${({ theme }) => theme.colors.secondary['50']};
 `;
 

@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background-color: #f2f4e7;
+  padding-top: ${({ theme }) => theme.sections.contactMe.paddings.top};
+  padding-bottom: calc(
+    ${({ theme }) =>
+      theme.sections.footer.waveHeight + ' + ' + theme.sections.contactMe.paddings.bottom}
+  );
 `;
 
 export const Title = styled.h2`

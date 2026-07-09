@@ -20,10 +20,50 @@ const colors = {
   accent: '#E84949',
 } as const;
 
+const sections = {
+  header: {
+    height: '83px',
+  },
+  hero: {
+    paddings: {
+      top: '90px',
+      bottom: '25px',
+    },
+  },
+  skills: {
+    paddings: {
+      top: '25px',
+      bottom: '70px',
+    },
+  },
+  projects: {
+    paddings: {
+      top: '30px',
+      bottom: '35px',
+    },
+  },
+  contactMe: {
+    paddings: {
+      top: '75px',
+      bottom: '85px',
+    },
+  },
+  footer: {
+    height: '360px',
+    waveHeight: 'calc(100vw * 70 / 1440)',
+    paddings: {
+      top: '100px',
+    },
+  },
+} as const;
+
+const container = {
+  maxWidth: '1240px',
+  paddingX: '24px',
+};
+
 const sizes = {
-  headerHeight: '80px',
   skillIcon: '40px',
-  footerWaveHeight: 'calc(100vw * 70 / 1440)',
 } as const;
 
 const fontSize = {
@@ -53,6 +93,8 @@ export const theme = {
   fontFamily: "'Be Vietnam Pro', sans-serif",
   fontWeight,
   colors,
+  sections,
+  container,
   spacing,
   sizes,
   fontSize,

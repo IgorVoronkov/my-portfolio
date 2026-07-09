@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  padding-top: ${({ theme }) => theme.sections.skills.paddings.top};
+  padding-bottom: ${({ theme }) => theme.sections.skills.paddings.bottom};
   text-align: center;
 `;
 
