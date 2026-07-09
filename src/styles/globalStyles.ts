@@ -11,9 +11,7 @@ const globalStyles = css`
   }
 
   #root > section {
-    scroll-margin-top: calc(
-      ${({ theme }) => theme.sections.header.height + ' + ' + theme.spacing.md}
-    );
+    scroll-margin-top: calc(${({ theme }) => theme.sections.header.height});
   }
 `;
 

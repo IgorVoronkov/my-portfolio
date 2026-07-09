@@ -8,7 +8,19 @@ const font = {
   size: {
     base: '1rem', // 16px — база
     md: '1.125rem', // 18px
+    lg: '1.25rem', // 20px
   },
+} as const;
+
+const spacing = {
+  none: '0px',
+  xxs: '4px',
+  xs: '8px',
+  sm: '16px',
+  md: '24px',
+  lg: '32px',
+  xl: '48px',
+  xxl: '64px',
 } as const;
 
 const fontWeight = {
@@ -76,6 +88,11 @@ const sections = {
       top: '100px',
     },
   },
+  defaults: {
+    minHeight: '550px',
+    titleGap: spacing.md,
+    paddingY: spacing.md,
+  },
 } as const;
 
 const container = {
@@ -97,17 +114,6 @@ const fontSize = {
   '3xl': '2rem', // 32px
   '4xl': '2.5rem', // 40px
   '5xl': '3rem', // 48px
-} as const;
-
-const spacing = {
-  none: '0px',
-  xxs: '4px',
-  xs: '8px',
-  sm: '16px',
-  md: '24px',
-  lg: '32px',
-  xl: '48px',
-  xxl: '64px',
 } as const;
 
 export const theme = {
