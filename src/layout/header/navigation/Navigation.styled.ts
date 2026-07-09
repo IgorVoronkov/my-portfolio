@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const StyledNavLink = styled.a`
-  font-size: ${({ theme }) => theme.fontSize.xl};
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme }) => theme.colors.primary[500]};
+  font-size: ${({ theme }) => theme.sections.header.navLinks.fontSize};
+  font-weight: ${({ theme }) => theme.sections.header.navLinks.fontWeight};
+  color: ${({ theme }) => theme.sections.header.navLinks.color};
   transition: color 0.2s ease;
 
   &:hover,
   &:focus-visible {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.sections.header.navLinks.hoverColor};
   }
 
   &:active {

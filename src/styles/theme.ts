@@ -1,3 +1,16 @@
+const font = {
+  weight: {
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+  },
+  size: {
+    base: '1rem', // 16px — база
+    md: '1.125rem', // 18px
+  },
+} as const;
+
 const fontWeight = {
   regular: 400,
   medium: 500,
@@ -23,6 +36,14 @@ const colors = {
 const sections = {
   header: {
     height: '83px',
+    navLinks: {
+      gap: '50px',
+      fontSize: font.size.md,
+      fontWeight: font.weight.medium,
+      color: colors.primary[500],
+      hoverColor: colors.accent,
+    },
+    zIndex: 99,
   },
   hero: {
     paddings: {
@@ -90,6 +111,7 @@ const spacing = {
 } as const;
 
 export const theme = {
+  font,
   fontFamily: "'Be Vietnam Pro', sans-serif",
   fontWeight,
   colors,
