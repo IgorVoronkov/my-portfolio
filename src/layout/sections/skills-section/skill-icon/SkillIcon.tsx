@@ -7,9 +7,7 @@ interface SkillIconProps {
 
 export const SkillIcon = ({ skill }: SkillIconProps) => (
   <S.Figure>
-    <S.Hexagon>
-      <S.Icon src={skill.icon} alt="" />
-    </S.Hexagon>
+    <S.Icon src={skill.icon} alt={skill.label} $enlarged={skill.enlarged} />
     <S.Caption>{skill.label}</S.Caption>
   </S.Figure>
 );

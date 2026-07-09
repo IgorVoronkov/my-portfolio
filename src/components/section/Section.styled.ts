@@ -5,7 +5,6 @@ import { type SectionProps } from './Section.types';
 type SectionType = Pick<SectionProps, '$variant' | '$padding'>;
 
 export const Title = styled.h2`
-  margin-bottom: ${({ theme }) => theme.spacing.md};
   font-size: ${({ theme }) => theme.font.size.lg};
   font-weight: ${({ theme }) => theme.font.weight.medium};
   text-align: center;

@@ -1,21 +1,10 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
-  padding-top: ${({ theme }) => theme.sections.skills.paddings.top};
-  padding-bottom: ${({ theme }) => theme.sections.skills.paddings.bottom};
-  text-align: center;
-`;
-
-export const Heading = styled.h2`
-  font-size: ${({ theme }) => theme.fontSize.xl};
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
-  color: ${({ theme }) => theme.colors.accent};
-`;
-
-export const Content = styled.div`
-  li {
-    min-width: calc(100% / 4);
-  }
+export const SkillsList = styled.ul`
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 10px;
 `;
 
 export const Description = styled.p`

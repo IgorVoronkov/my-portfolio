@@ -68,6 +68,12 @@ const sections = {
       top: '25px',
       bottom: '70px',
     },
+    pictureWidth: '500px',
+    minHeight: '450px',
+    icon: {
+      width: '40px',
+      wrapperWidth: '75px',
+    },
   },
   projects: {
     paddings: {
@@ -89,7 +95,7 @@ const sections = {
     },
   },
   defaults: {
-    minHeight: '550px',
+    minHeight: '400px',
     titleGap: spacing.md,
     paddingY: spacing.md,
   },

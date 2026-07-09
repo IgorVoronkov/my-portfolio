@@ -1,26 +1,30 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export interface ContentIllustratedStyledProps {
-  $picture: {
-    src: string;
-    where: 'left' | 'right';
-    width: string;
-  };
-  $gap?: string | undefined;
-}
+import { type ContentIllustratedProps } from './ContentIllustrated.types';
 
-export const ContentIllustratedStyled = styled.div<ContentIllustratedStyledProps>`
+export const ContentIllustratedStyled = styled.div<ContentIllustratedProps>`
   display: flex;
-  align-items: stretch;
-  min-height: calc(${({ $picture: { width } }) => width} * 0.9);
+  align-items: center;
+  min-height: ${({ theme, $minHeight }) => $minHeight ?? theme.sections.defaults.minHeight};
 
-  & > div {
-    width: calc(calc(100% - ${({ $picture: { width } }) => width}) - ${({ $gap = '0px' }) => $gap});
-    margin: ${({ $picture: { where } }) => (where === 'left' ? '0 0 0 auto' : '0 auto 0 0')};
+  & > div:only-child {
+    max-width: calc(100% - ${({ $picture: { width } }) => width});
+
+    ${({ $picture: { where } }) => {
+      return where === 'left'
+        ? css`
+            margin-left: auto;
+          `
+        : css`
+            margin-right: auto;
+          `;
+    }}
   }
 
-  background-image: url(${({ $picture: { src } }) => src});
-  background-repeat: no-repeat;
-  background-position: ${({ $picture: { where } }) => where} center;
-  background-size: ${({ $picture: { width } }) => width} auto;
+  ${({ $picture }) => css`
+    background-image: url(${$picture.src});
+    background-repeat: no-repeat;
+    background-position: ${$picture.where} center;
+    background-size: ${$picture.width} auto;
+  `}
 `;

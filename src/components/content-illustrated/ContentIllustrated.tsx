@@ -1,16 +1,16 @@
 import type { PropsWithChildren } from 'react';
 
-import {
-  ContentIllustratedStyled,
-  type ContentIllustratedStyledProps,
-} from './ContentIllustrated.styled';
+import { ContentIllustratedStyled } from './ContentIllustrated.styled';
+import { type ContentIllustratedProps } from './ContentIllustrated.types';
 
 export const ContentIllustrated = ({
   $picture,
-  $gap,
+  $minHeight,
   children,
-}: PropsWithChildren<ContentIllustratedStyledProps>) => (
-  <ContentIllustratedStyled $picture={$picture} $gap={$gap}>
-    <div>{children}</div>
-  </ContentIllustratedStyled>
-);
+}: PropsWithChildren<ContentIllustratedProps>) => {
+  return (
+    <ContentIllustratedStyled $picture={$picture} $minHeight={$minHeight}>
+      <div>{children}</div>
+    </ContentIllustratedStyled>
+  );
+};
