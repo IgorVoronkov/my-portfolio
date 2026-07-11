@@ -1,9 +1,11 @@
 const breakpoints = {
   mobile: '640px',
+  tablet: '1024px',
 } as const;
 
 const media = {
   mobile: `@media (max-width: ${breakpoints.mobile})`,
+  tablet: `@media (max-width: ${breakpoints.tablet})`,
 } as const;
 
 const font = {

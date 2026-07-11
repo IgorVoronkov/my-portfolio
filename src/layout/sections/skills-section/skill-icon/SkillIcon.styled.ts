@@ -15,6 +15,10 @@ export const Figure = styled.figure`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  ${({ theme }) => theme.media.mobile} {
+    margin-inline: auto;
+  }
 `;
 
 export const Icon = styled.img<{ $enlarged: boolean }>`
