@@ -5,26 +5,25 @@ import { type ContentIllustratedProps } from './ContentIllustrated.types';
 export const ContentIllustratedStyled = styled.div<ContentIllustratedProps>`
   display: flex;
   align-items: center;
-  min-height: ${({ theme, $minHeight }) => $minHeight ?? theme.sections.defaults.minHeight};
 
-  & > div:only-child {
-    max-width: calc(100% - ${({ $picture: { width } }) => width});
-
-    ${({ $picture: { where } }) => {
-      return where === 'left'
-        ? css`
-            margin-left: auto;
-          `
-        : css`
-            margin-right: auto;
-          `;
-    }}
-  }
-
-  ${({ $picture }) => css`
+  ${({ theme, $picture, $minHeight }) => {
+    const imgWidth = `min(${$picture.width}, 45%)`;
+    return css`
+    min-height: ${$minHeight ?? theme.sections.defaults.minHeight};
     background-image: url(${$picture.src});
     background-repeat: no-repeat;
     background-position: ${$picture.where} center;
-    background-size: ${$picture.width} auto;
-  `}
+    background-size: ${imgWidth} auto;
+    padding-${$picture.where}: calc(${imgWidth} + ${theme.spacing.sm});
+
+    & > div:only-child {
+      flex: 1;
+    }
+
+    ${theme.media.mobile} {
+      padding: 0;
+      background: none;
+    }
+  `;
+  }}
 `;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { type SectionProps } from './Section.types';
 
@@ -11,16 +11,14 @@ export const Title = styled.h2`
 `;
 
 export const Section = styled.section<SectionType>`
-  padding-top: ${({ theme, $padding }) =>
-    $padding ? $padding.top : theme.sections.defaults.paddingY};
-  padding-bottom: ${({ theme, $padding }) =>
-    $padding ? $padding.bottom : theme.sections.defaults.paddingY};
-  color: ${({ theme, $variant }) =>
-    $variant === 'primary' ? theme.colors.primary[400] : theme.colors.secondary[0]};
-  background-color: ${({ theme, $variant }) =>
-    $variant === 'primary' ? null : theme.colors.primary[500]};
+  ${({ theme, $variant = 'primary', $padding }) => css`
+    padding-top: ${$padding?.top ?? theme.sections.defaults.paddingY};
+    padding-bottom: ${$padding?.bottom ?? theme.sections.defaults.paddingY};
+    color: ${$variant === 'primary' ? theme.colors.primary[400] : theme.colors.secondary[0]};
+    background-color: ${theme.sections.bgColor[$variant]};
 
-  h2${Title} {
-    color: ${({ theme, $variant }) => ($variant === 'primary' ? theme.colors.accent : null)};
-  }
+    ${Title} {
+      color: ${$variant === 'primary' ? theme.colors.accent : null};
+    }
+  `}
 `;

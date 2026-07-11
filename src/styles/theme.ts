@@ -1,3 +1,11 @@
+const breakpoints = {
+  mobile: '640px',
+} as const;
+
+const media = {
+  mobile: `@media (max-width: ${breakpoints.mobile})`,
+} as const;
+
 const font = {
   weight: {
     regular: 400,
@@ -86,6 +94,11 @@ const sections = {
       top: '75px',
       bottom: '85px',
     },
+    pictureWidth: '560px',
+    form: {
+      width: '610px',
+      gap: '40px',
+    },
   },
   footer: {
     height: '360px',
@@ -94,8 +107,12 @@ const sections = {
       top: '100px',
     },
   },
+  bgColor: {
+    primary: colors.secondary[50],
+    secondary: colors.primary[500],
+  },
   defaults: {
-    minHeight: '400px',
+    minHeight: '500px',
     titleGap: spacing.md,
     paddingY: spacing.md,
   },
@@ -123,6 +140,8 @@ const fontSize = {
 } as const;
 
 export const theme = {
+  breakpoints,
+  media,
   font,
   fontFamily: "'Be Vietnam Pro', sans-serif",
   fontWeight,
