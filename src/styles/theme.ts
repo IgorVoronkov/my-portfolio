@@ -53,6 +53,7 @@ const colors = {
     50: '#F7F6FB',
   },
   accent: '#E84949',
+  highlight: '#0ACBBF',
 } as const;
 
 const sections = {
@@ -103,10 +104,10 @@ const sections = {
     },
   },
   footer: {
-    height: '360px',
-    waveHeight: 'calc(100vw * 70 / 1440)',
+    height: '450px',
+    waveHeight: '80px',
     paddings: {
-      top: '100px',
+      top: '180px',
     },
   },
   bgColor: {

@@ -17,14 +17,14 @@ export const Footer = styled.footer`
     top: 0;
     display: block;
     width: 100%;
-    height: calc(${({ theme }) => theme.sections.footer.waveHeight} + 10px);
+    height: ${({ theme }) => theme.sections.footer.waveHeight};
     content: '';
-    background-color: inherit;
+    background-color: ${({ theme }) => theme.sections.bgColor.primary};
     mask-image: url(${wave});
     mask-repeat: no-repeat;
-    mask-position: bottom;
+    mask-position: top;
     mask-size: 100% auto;
-    transform: translateY(-99%);
+    transform: translateY(-2px);
   }
 `;
 
@@ -35,4 +35,8 @@ export const BlockLabel = styled.p`
 export const SocialList = styled.ul`
   display: flex;
   gap: 24px;
+`;
+
+export const Span = styled.span`
+  color: ${({ theme }) => theme.colors.highlight};
 `;

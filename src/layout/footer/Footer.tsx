@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <S.Footer>
       <Container>
-        <FlexWrapper $justifyContent="space-around">
+        <FlexWrapper $justifyContent="space-around" $alignItems="flex-start">
           <div>
             <S.BlockLabel>My social media links:</S.BlockLabel>
             <FlexWrapper as="ul" $gap="32px">
@@ -23,8 +23,8 @@ export const Footer = () => {
 
           <div>
             <S.BlockLabel>{"More projects I've worked on"}</S.BlockLabel>
-            <SocialLink iconSrc={github.iconUrl} href={github.url}>
-              @{github.username} on github
+            <SocialLink iconSrc={github.iconUrl} href={github.url} $gap="22px">
+              @<S.Span>{github.username}</S.Span> on github
             </SocialLink>
           </div>
         </FlexWrapper>
