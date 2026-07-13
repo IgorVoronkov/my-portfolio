@@ -18,9 +18,11 @@ export const HeroSection = () => {
             </S.Presentation>
             <S.Button>Hire me</S.Button>
           </S.Content>
-          <S.PortraitWrapper>
-            <S.PortraitImage src={HeroPhotoUrl} alt="Igor Voronkov" />
-          </S.PortraitWrapper>
+          <S.PhotoFrame>
+            <S.PhotoFramePadding>
+              <S.PhotoImage src={HeroPhotoUrl} alt="Igor Voronkov" />
+            </S.PhotoFramePadding>
+          </S.PhotoFrame>
         </FlexWrapper>
       </Container>
     </S.Section>

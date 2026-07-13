@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
-import { CirclesUrl, HeroPhotoBgUrl } from '@/assets/images/hero-section';
+import { circlesUrl, cubeUrl, ellipseUrl, plusUrl, zigzagsUrl } from '@/assets/images/hero-section';
 
-const bgUrl = `"${HeroPhotoBgUrl}"`;
-const circlesUrl = `"${CirclesUrl}"`;
+const circles = `"${circlesUrl}"`;
+const cube = `"${cubeUrl}"`;
+const ellipse = `"${ellipseUrl}"`;
+const plus = `"${plusUrl}"`;
+const zigzags = `"${zigzagsUrl}"`;
 
 export const Section = styled.section`
   padding-top: ${({ theme }) => theme.sections.hero.paddings.top};
@@ -43,30 +46,43 @@ export const Button = styled.button`
   border-radius: 0.25rem;
 `;
 
-export const PortraitWrapper = styled.div`
+export const PhotoFrame = styled.div`
+  width: 100%;
+  max-width: 410px;
+  aspect-ratio: 5 / 6;
+  container-type: size;
+`;
+
+export const PhotoFramePadding = styled.div`
   position: relative;
-  width: 413px;
-  height: 490px;
-  padding: 50px 25px 40px 45px;
-  background-image: url(${bgUrl});
+  height: 100%;
+  padding: 11cqh 6cqw 9cqh 11cqw;
+  background-image: url(${cube}), url(${plus}), url(${zigzags}), url(${ellipse});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position:
+    top right,
+    40cqw 0,
+    0 7cqh,
+    6cqw 94cqh;
+  background-size: 10cqw, 7cqw, 9cqw, 5cqw;
 
   &::after {
     position: absolute;
-    right: 12px;
+    right: 3cqw;
     bottom: 0;
-    width: 111px;
-    height: 69px;
+    width: 27cqw;
+    height: 14cqh;
     content: '';
-    background-image: url(${circlesUrl});
+    background-image: url(${circles});
     background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
   }
 `;
 
-export const PortraitImage = styled.img`
+export const PhotoImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
 `;
