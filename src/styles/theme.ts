@@ -26,11 +26,11 @@ const spacing = {
   none: '0px',
   xxs: '4px',
   xs: '8px',
-  sm: '16px',
-  md: '24px',
-  lg: '32px',
-  xl: '48px',
-  xxl: '64px',
+  sm: '12px',
+  md: '16px',
+  lg: '20px',
+  xl: '24px',
+  xxl: '32px',
 } as const;
 
 const fontWeight = {
@@ -49,8 +49,9 @@ const colors = {
     900: '#1F243D', // самый тёмный — хединги, максимальный контраст
   },
   secondary: {
-    0: '#FCFCFC',
-    50: '#F7F6FB',
+    light: 'rgba(255, 255, 255, 0.87)',
+    base: '#FFF',
+    dark: '#F7F6FB',
   },
   accent: '#E84949',
   highlight: '#0ACBBF',
@@ -87,6 +88,7 @@ const sections = {
     },
   },
   projects: {
+    minHeight: '600px',
     paddings: {
       top: '30px',
       bottom: '35px',
@@ -111,13 +113,13 @@ const sections = {
     },
   },
   bgColor: {
-    primary: colors.secondary[50],
+    primary: colors.secondary.dark,
     secondary: colors.primary[500],
   },
   defaults: {
     minHeight: '500px',
-    titleGap: spacing.md,
-    paddingY: spacing.md,
+    titleGap: spacing.xl,
+    paddingY: spacing.xl,
   },
 } as const;
 

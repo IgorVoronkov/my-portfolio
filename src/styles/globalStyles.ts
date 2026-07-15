@@ -7,7 +7,7 @@ const globalStyles = css`
 
   body {
     font-family: ${({ theme }) => theme.fontFamily};
-    background-color: ${({ theme }) => theme.colors.secondary[50]};
+    background-color: ${({ theme }) => theme.colors.secondary.dark};
   }
 
   #root > section {

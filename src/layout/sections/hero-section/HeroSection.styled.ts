@@ -11,7 +11,7 @@ const zigzags = `"${zigzagsUrl}"`;
 export const Section = styled.section`
   padding-top: ${({ theme }) => theme.sections.hero.paddings.top};
   padding-bottom: ${({ theme }) => theme.sections.hero.paddings.bottom};
-  background-color: ${({ theme }) => theme.colors.secondary['50']};
+  background-color: ${({ theme }) => theme.colors.secondary.dark};
 `;
 
 export const Content = styled.div`
@@ -25,22 +25,22 @@ export const Greeting = styled.span`
 `;
 
 export const Heading = styled.h1`
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
+  margin-bottom: ${({ theme }) => theme.spacing.md};
   font-size: ${({ theme }) => theme.fontSize['5xl']};
 `;
 
 export const Presentation = styled.p`
-  margin-bottom: ${({ theme }) => theme.spacing.md};
+  margin-bottom: ${({ theme }) => theme.spacing.xl};
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   color: ${({ theme }) => theme.colors.primary[400]};
 `;
 
 export const Button = styled.button`
-  padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.sm}`};
+  padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.md}`};
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme }) => theme.colors.secondary[0]};
+  color: ${({ theme }) => theme.colors.secondary.base};
   background-color: ${({ theme }) => theme.colors.accent};
   border: none;
   border-radius: 0.25rem;

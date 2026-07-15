@@ -8,7 +8,7 @@ export const Footer = styled.footer`
   position: relative;
   height: ${({ theme }) => theme.sections.footer.height};
   padding-top: ${({ theme }) => theme.sections.footer.paddings.top};
-  color: ${({ theme }) => theme.colors.secondary[0]};
+  color: ${({ theme }) => theme.colors.secondary.base};
   text-align: center;
   background-color: ${({ theme }) => theme.colors.primary[500]};
 

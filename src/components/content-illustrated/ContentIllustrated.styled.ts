@@ -14,7 +14,7 @@ export const ContentIllustratedStyled = styled.div<ContentIllustratedProps>`
     background-repeat: no-repeat;
     background-position: ${$picture.where} center;
     background-size: ${imgWidth} auto;
-    padding-${$picture.where}: calc(${imgWidth} + ${theme.spacing.sm});
+    padding-${$picture.where}: calc(${imgWidth} + ${theme.spacing.md});
 
     & > div:only-child {
       flex: 1;
