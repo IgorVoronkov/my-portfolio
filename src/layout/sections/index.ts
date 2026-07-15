@@ -1,4 +1,4 @@
-export * from './contact-section';
-export * from './hero-section';
-export * from './projects-section';
-export * from './skills-section';
+export { ContactSection } from './contact-section/ContactSection';
+export { HeroSection } from './hero-section/HeroSection';
+export { ProjectsSection } from './projects-section/ProjectsSection';
+export { SkillsSection } from './skills-section/SkillsSection';

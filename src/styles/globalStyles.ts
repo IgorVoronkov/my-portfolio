@@ -1,72 +1,20 @@
 import { createGlobalStyle, css } from 'styled-components';
 
-const globalCss = css`
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  *:not(dialog) {
-    margin: 0;
+const globalStyles = css`
+  :root {
+    scroll-behavior: smooth;
   }
 
   body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: ${({ theme }) => theme.fontFamily};
+    background-color: ${({ theme }) => theme.colors.secondary.dark};
   }
 
-  ul,
-  ol {
-    padding: 0;
-    list-style: none;
-  }
-
-  img,
-  picture,
-  video,
-  canvas,
-  svg {
-    display: block;
-    max-width: 100%;
-  }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    overflow-wrap: break-word;
-  }
-
-  p {
-    text-wrap: pretty;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-wrap: balance;
-  }
-
-  #root {
-    isolation: isolate;
+  #root > section {
+    scroll-margin-top: calc(${({ theme }) => theme.sections.header.height});
   }
 `;
 
 export const GlobalStyles = createGlobalStyle`
-  ${globalCss}
+  ${globalStyles}
 `;

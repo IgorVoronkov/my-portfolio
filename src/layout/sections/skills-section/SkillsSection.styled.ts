@@ -1,52 +1,23 @@
 import styled from 'styled-components';
 
-import illustrationUrl from '@/assets/images/skills-illustration.svg';
+export const SkillsList = styled.ul`
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 10px;
 
-export const Section = styled.section`
-  background-color: #c78fb0;
-`;
+  ${({ theme }) => theme.media.tablet} {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-export const Heading = styled.h2`
-  margin-bottom: 20px;
-  text-align: center;
-`;
-
-export const Columns = styled.div`
-  display: flex;
-  align-items: stretch;
-`;
-
-export const LeftColumn = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
+  ${({ theme }) => theme.media.mobile} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const Description = styled.p`
-  text-align: center;
-`;
-
-export const SkillsGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-`;
-
-export const RightColumn = styled.div`
-  display: flex;
-  flex: 0 0 40%;
-  align-items: center;
-`;
-
-export const Illustration = styled.div`
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  background-image: url(${illustrationUrl});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  margin: ${({ theme }) => theme.spacing.lg} 0;
+  font-size: ${({ theme }) => theme.fontSize.lg};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  color: ${({ theme }) => theme.colors.primary[400]};
 `;

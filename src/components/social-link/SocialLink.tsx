@@ -1,27 +1,22 @@
-import { type ReactNode } from 'react';
-
 import * as S from './SocialLink.styled';
-
-interface SocialLinkProps {
-  iconSrc: string;
-  href: string;
-  'aria-label'?: string;
-  children?: ReactNode;
-}
+import { type SocialLinkProps } from './SocialLink.types';
 
 export const SocialLink = ({
   iconSrc,
   href,
   'aria-label': ariaLabel,
+  $gap,
   children,
-}: SocialLinkProps) => (
-  <S.Link
-    href={href}
-    aria-label={children ? undefined : ariaLabel}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <S.Icon src={iconSrc} alt="" />
-    {children}
-  </S.Link>
-);
+}: SocialLinkProps) => {
+  return (
+    <S.Link
+      href={href}
+      aria-label={children ? undefined : ariaLabel}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <S.Icon src={iconSrc} alt="" $gap={$gap} />
+      {children}
+    </S.Link>
+  );
+};

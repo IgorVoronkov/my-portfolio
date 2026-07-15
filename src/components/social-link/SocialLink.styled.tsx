@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
+import { type IconProps } from './SocialLink.types';
+
 export const Link = styled.a`
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
   color: inherit;
   text-decoration: none;
 `;
 
-export const Icon = styled.img`
+export const Icon = styled.img<IconProps>`
+  display: inline-block;
   width: 30px;
   height: 30px;
+  margin-right: ${({ $gap }) => $gap ?? null};
+  vertical-align: middle;
 `;
